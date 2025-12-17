@@ -2,24 +2,19 @@ import matplotlib.pyplot as plt
 from PIL import Image
 import numpy as np
 import sys
+import os
+
+
 
 
 output_file = "polar_coordinate.txt" 
 img_path = "1.png"
 
+
 try:
     img = Image.open(img_path)
 except FileNotFoundError:
     print(f"오류: '{img_path}' 파일을 찾을 수 없습니다. 파일 경로를 확인해 주세요.")
-    sys.exit()
-
-
-try:
-    with open(output_file, "w") as f:
-        f.write("")
-    print(f"'{output_file}' 파일이 초기화되었습니다.")
-except Exception as e:
-    print(f"파일 초기화 중 오류 발생: {e}")
     sys.exit()
 
 
